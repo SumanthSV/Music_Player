@@ -74,48 +74,84 @@ music player/
 
 
 Backend Responsibilities:
+
   Serve audio files (/audio/*.mp3)
+  
   Expose API endpoints (/,/songs)
+  
   Provide metadata for playlist
+  
   MongoDB integration
 
+
 Frontend Responsibilities
+
   Render player UI
+  
   Handle voice recognition (Web Speech API)
+  
   Convert text → intent and send to backend
+  
   Map recognized text → intent
+  
   Animate UI with track colors and audio spikes animation
 
+
 ⚙️ Setup & Run Instructions
+
 1️⃣ Clone the repository
+
 git clone https://github.com/SumanthSV/Music_Player.git
+
 cd Music_Player
 
+
 Backend Setup
+
 2️⃣ Install backend dependencies
+
 cd backend
+
 npm install
+
 
 3️⃣ Environment variables
+
 Create a .env file inside backend/:
+
 PORT=5000
+
 MONGO_URI=your_mongo_atlas_url
+
 DB_NAME=your_db_name
 
+
 4️⃣ Start backend
+
 npm run dev
+
 Backend will run on:
+
 http://localhost:5000
 
+
 Frontend Setup
+
 5️⃣ Install frontend dependencies
+
 cd ../frontend
+
 npm install
 
+
 6️⃣ Start frontend
+
 npm run dev
+
 Frontend will run on:
+
 http://localhost:5173
+
 
 🔊 List of Supported Voice Commands
 🎵 Playback
@@ -134,38 +170,58 @@ http://localhost:5173
 
 
 🔧 How Intent Processing Works
+
 Frontend Pipeline:
 
   Speech → Text (Web Speech API)
+  
           ↓
+          
   Intent Parser (frontend utility)
+  
           ↓
   if the intent is command of song name -> Song matching is done and a paticular song is picked -> POST /songs (songs are fetched for the backend)
+  
           ↓
+          
   if it is a normal command -> action will be taken
+  
 
 🧪 How to Test Locally
 
 to seed data to the mongo use the given SeedSongs.json file
 
+
 ✔ 1. Start backend → confirm http://localhost:5000/songs returns JSON
+
 ✔ 2. Start frontend → confirm playlist loads
+
 ✔ 3. Test audio playback
+
 ✔ 4. Press “Speak” and try commands:
 
 "beliver" -> song name
 
 "pause"
+
 "next"
+
 "volume up"
+
 
 ⚠️ Limitations
 
   Browser Web Speech API accuracy varies by device
+  
   Local audio files (no cloud streaming)
+  
   No real audio fingerprinting (humming search not included)
+  
   Not optimized for large playlists
+  
   Background/noisy environments reduce accuracy
+  
 
 🎥 Deployment link
+
 https://music-player-liard-nu.vercel.app/
