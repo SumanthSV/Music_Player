@@ -1,4 +1,4 @@
-🎵** Musy - Voice-Controlled Web Music Player**
+🎵 **Musy - Voice-Controlled Web Music Player**
 
 A real-time voice-powered web music player built with React, Node.js, MongoDB, and the Web Speech API.
 
@@ -21,7 +21,7 @@ Musy lets users control music using natural speech commands like:
 -> “Naatu naatu” → Naatu Naatu plays
 
 
-**List of songs: **
+**List of songs:**
 
 1.Shape of You
 
@@ -44,7 +44,7 @@ Musy lets users control music using natural speech commands like:
 10.Tum Hi Ho
 
 
-**🚀 Features**
+🚀 **Features**
 
 ✔ Voice-controlled playback (Play, Pause, Next, Previous)
 
@@ -61,7 +61,7 @@ Musy lets users control music using natural speech commands like:
 ✔ Single-page React frontend
 
 
-**🏗 Architecture Overview**
+🏗 **Architecture Overview**
 
 music player/
 │
@@ -123,7 +123,7 @@ music player/
 -> Animate UI with track colors and audio spikes animation
 
 
-**⚙️ Setup & Run Instructions**
+⚙️**Setup & Run Instructions**
 
 1️⃣ Clone the repository
 
@@ -179,7 +179,7 @@ Frontend will run on:
 http://localhost:5173
 
 
-**🔊 List of Supported Voice Commands**
+🔊**List of Supported Voice Commands**
 
 🎵 Playback
 | Intent                  | Example Utterances                       |
@@ -196,20 +196,23 @@ http://localhost:5173
 | To play particular song | < "_just say any song name from list_" > |
 
 
-🔧 How Intent Processing Works
+🔧 **How Intent Processing Works**
 
 Frontend Pipeline:
 
 Speech → Text (Web Speech API)
-      ↓
+
+  ↓
 Intent Parser (frontend utility)
-      ↓
+
+  ↓
 if the intent is command of song name -> Song matching is done and a paticular song is picked -> POST /songs (songs are fetched for the backend)
-      ↓
+
+  ↓
 if it is a normal command -> action will be taken
 
 
-**🧪 How to Test Locally**
+🧪**How to Test Locally**
 
 to seed data to the mongoDB use the given SeedSongs.json file
 
@@ -230,7 +233,7 @@ to seed data to the mongoDB use the given SeedSongs.json file
 "volume up"
 
 
-**⚠️ Limitations**
+⚠️ **Limitations**
 
 -> Browser Web Speech API accuracy varies by device
 
@@ -245,14 +248,13 @@ to seed data to the mongoDB use the given SeedSongs.json file
 -> The backend is deployed on a free-tier hosting service, which goes into sleep mode after inactivity. 
     As a result, the first request (including /songs) may take 15–25 seconds due to:
 
-  Server cold start
+  1. Server cold start
 
-  MongoDB Atlas cluster cold start
+  2. MongoDB Atlas cluster cold start
 
   After the initial warm-up, all subsequent requests typically respond within 200–400 ms.
 
-**🎥 Deployment link**
+🎥 **Deployment link**
 
 https://music-player-liard-nu.vercel.app/
 
-cbd1127e599ed53010
