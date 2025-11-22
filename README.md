@@ -204,12 +204,15 @@ Frontend Pipeline:
 Speech → Text (Web Speech API)
 
   ↓
+  
 Intent Parser (frontend utility)
 
   ↓
+  
 if the intent is command of song name -> Song matching is done and a paticular song is picked -> POST /songs (songs are fetched for the backend)
 
   ↓
+  
 if it is a normal command -> action will be taken
 
 
