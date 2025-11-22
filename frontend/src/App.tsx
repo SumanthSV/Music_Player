@@ -227,7 +227,7 @@ function App() {
             <h1 className="text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Musy
             </h1>
-            <p className="text-gray-400 text-sm">AI Voice-Controlled Music Player</p>
+            <p className="text-gray-400 text-sm">Voice-Controlled Music Player</p>
           </div>
 
           <div className="flex flex-col items-center gap-8">
