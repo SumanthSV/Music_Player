@@ -3,23 +3,37 @@
 A real-time voice-powered web music player built with React, Node.js, MongoDB, and the Web Speech API.
 
 Musy lets users control music using natural speech commands like:
+
 “play/pause”
+
 “volume up/down”
-"next song/previous song"
-"forward 10 sec/backward 10 sec"
-"seek to 40sec/ go to 40 sec" or 
-just say any song name by a provided list like 
-"Beliver" -> beliver song will be played
-"Naatu naatu" -> Naatu naatu song will be played
+
+"next song / previous song"
+
+"forward 10 sec / backward 10 sec"
+
+"seek to 40 sec / go to 40 sec"
+
+Say a song name from the provided list:
+
+“Beliver” → Beliver song plays
+
+“Naatu naatu” → Naatu Naatu plays
 
 
 🚀 Features
 ✔ Voice-controlled playback (Play, Pause, Next, Previous)
+
 ✔ Voice search for tracks
+
 ✔ Manual mode (press-to-talk button)
+
 ✔ Animated music UI (speaker pulse + theme colors per track)
+
 ✔ MongoDB-based track metadata
+
 ✔ Static MP3 serving from backend
+
 ✔ Single-page React frontend
 
 🏗 Architecture Overview
