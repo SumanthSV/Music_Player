@@ -64,6 +64,7 @@ Musy lets users control music using natural speech commands like:
 🏗 **Architecture Overview**
 
 music player/
+
 │
 
 ├── frontend/   
