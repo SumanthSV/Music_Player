@@ -89,19 +89,18 @@ http://localhost:5173
 
 🔊 List of Supported Voice Commands
 🎵 Playback
-| Intent         | Example Utterances                      |
-| -------------- | --------------------------------------- |
-| Play           | "play", "resume song"                   |
-| Pause          | "pause", "stop music"                   |
-| Next Track     | "next", "skip", "next song"             |
-| Previous Track | "previous", "go back", "previous song"  |
-| Volume up      | "increase volume", "volume up"          |
-| Volume down    | "volume down", "decrease volume",       |
-| Seek Forward   | "forward 10 seconds"                    |
-| Seek Back      | "backward 10 seconds", "rewind"         |
-
-| Seek to specific time   | "seek to 60 seconds", "go to 50 seconds"    |
-| To play particular song | < "_just say any song name from list_" >    |
+| Intent                  | Example Utterances                       |
+| ------------------------| ---------------------------------------  |
+| Play                    | "play", "resume song"                    | 
+| Pause                   | "pause", "stop music"                    |
+| Next Track              | "next", "skip", "next song"              |
+| Previous Track          | "previous", "go back", "previous song"   |
+| Volume up               | "increase volume", "volume up"           |
+| Volume down             | "volume down", "decrease volume",        |
+| Seek Forward            | "forward 10 seconds"                     |
+| Seek Back               | "backward 10 seconds", "rewind"          |
+| Seek to specific time   | "seek to 60 seconds", "go to 50 seconds" |
+| To play particular song | < "_just say any song name from list_" > |
 
 
 🔧 How Intent Processing Works
