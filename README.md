@@ -139,4 +139,4 @@ to seed data to the mongo use the given SeedSongs.json file
   Background/noisy environments reduce accuracy
 
 🎥 Deployment link
-[https://music-player-liard-nu.vercel.app/]([url](https://music-player-liard-nu.vercel.app/))
+https://music-player-liard-nu.vercel.app/
