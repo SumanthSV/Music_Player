@@ -43,41 +43,6 @@ export const useAudioPlayer = () => {
       if (audioRef.current) setVolumeState(audioRef.current.volume);
     });
 
-    // Web Audio analyser (optional)
-    // try {
-    //   type Win = Window & { AudioContext?: typeof AudioContext; webkitAudioContext?: typeof AudioContext };
-    //   const AudioCtx = (window as Win).AudioContext || (window as Win).webkitAudioContext;
-    //   if (AudioCtx) {
-    //     audioContextRef.current = new AudioCtx();
-    //     analyserRef.current = audioContextRef.current.createAnalyser();
-    //     analyserRef.current.fftSize = 256;
-    //     try {
-    //       sourceRef.current = audioContextRef.current.createMediaElementSource(audioRef.current);
-    //       sourceRef.current.connect(analyserRef.current);
-    //       analyserRef.current.connect(audioContextRef.current.destination);
-
-    //       const data = new Uint8Array(analyserRef.current.frequencyBinCount);
-    //       const loop = () => {
-    //         if (!analyserRef.current) return;
-    //         analyserRef.current.getByteTimeDomainData(data);
-    //         let sum = 0;
-    //         for (let i = 0; i < data.length; i++) {
-    //           const v = (data[i] - 128) / 128;
-    //           sum += v * v;
-    //         }
-    //         const rms = Math.sqrt(sum / data.length);
-    //         setAudioLevel(Number(rms.toFixed(3)));
-    //         rafRef.current = requestAnimationFrame(loop);
-    //       };
-    //       rafRef.current = requestAnimationFrame(loop);
-    //     } catch (err) {
-    //       console.warn('Could not create MediaElementSourceNode:', err);
-    //     }
-    //   }
-    // } catch (err) {
-    //   console.warn('Web Audio API unavailable:', err);
-    // }
-
     audioInitializedRef.current = true;
   };
 

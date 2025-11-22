@@ -3,7 +3,7 @@ interface SpeakerAnimationProps {
   audioLevel?: number; // 0..1
 }
 
-export const SpeakerAnimation = ({ isPlaying, audioLevel = 0 }: SpeakerAnimationProps) => {
+export const SpeakerAnimation = ({ isPlaying, audioLevel = 3 }: SpeakerAnimationProps) => {
   const bars = 6;
   const level = Math.min(1, Math.max(0, audioLevel));
 

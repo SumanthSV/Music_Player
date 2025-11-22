@@ -254,15 +254,12 @@ function App() {
 
             <VoiceControl
               isListening={isListening}
-              // isMusyMode={isMusyMode}
               isSupported={isSupported}
-              // onToggleMusyMode={handleToggleMusyMode}
               onMicClick={handleMicClick}
             />
 
             <div className="flex flex-col items-center gap-2">
               <div className="text-xs text-gray-400">
-                {/* <div>Listening: {isListening ? 'Yes' : 'No'}</div> */}
                 {lastTranscript && <div>Heard: {lastTranscript}</div>}
               </div>
             </div>
@@ -334,5 +331,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
