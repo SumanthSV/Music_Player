@@ -41,14 +41,14 @@ function App() {
     resumeAfterCommandRef.current = true;
 
     // play/pause
-    if (/\bpause\b/.test(t)) {
+    if (/\b(pause|stop music)\b/.test(t)) {
       setToast({ message: 'Paused', type: 'success' });
       if (isPlayingRef.current) togglePlayPause();
       resumeAfterCommandRef.current = false;
       return;
     }
 
-    if (/\b(play)\b/.test(t)) {
+    if (/\b(play|resume song)\b/.test(t)) {
       setToast({ message: 'Playing', type: 'success' });
       if (!isPlayingRef.current) togglePlayPause();
       resumeAfterCommandRef.current = true;
@@ -56,14 +56,14 @@ function App() {
     }
 
     // next / previous
-    if (/\b(next|skip)\b/.test(t)) {
+    if (/\b(next|skip|next song)\b/.test(t)) {
       next();
       setToast({ message: 'Next track', type: 'success' });
       resumeAfterCommandRef.current = true;
       return;
     }
 
-    if (/\b(prev|previous|back)\b/.test(t)) {
+    if (/\b(go back|previous|previous song)\b/.test(t)) {
       previous();
       setToast({ message: 'Previous track', type: 'success' });
       resumeAfterCommandRef.current = true;
