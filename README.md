@@ -20,6 +20,28 @@ Musy lets users control music using natural speech commands like:
 
 -> “Naatu naatu” → Naatu Naatu plays
 
+List of songs: 
+
+1.Shape of You
+
+2.Believer
+
+3.Perfect
+
+4.Blinding Lights
+
+5.Closer
+
+6.Levitating
+
+7.See You Again
+
+8.Faded
+
+9.Naatu Naatu
+
+10.Tum Hi Ho
+
 
 🚀 Features
 ✔ Voice-controlled playback (Play, Pause, Next, Previous)
