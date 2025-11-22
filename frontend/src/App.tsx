@@ -8,6 +8,7 @@ import { SpeakerAnimation } from './components/SpeakerAnimation';
 import { AmbientBackground } from './components/AmbientBackground';
 import { VoiceControl } from './components/VoiceControl';
 import { Toast } from './components/Toast';
+import Loading from './components/Loading';
 
 function App() {
   const [songs, setSongs] = useState<Song[]>([]);
@@ -149,20 +150,50 @@ function App() {
   }, [isListening, resume]);
 
   useEffect(() => {
+    let loadingTimer: NodeJS.Timeout | null = null;
+    let isMounted = true;
+
     const load = async () => {
       try {
+        // Set a 10-second timeout to show loading toast
+        loadingTimer = setTimeout(() => {
+          if (isMounted) {
+            setToast({ message: 'No songs available on the database', type: 'error' });
+          }
+        }, 10000);
+
         const data = await fetchSongs();
-        setSongs(data || []);
-        if (data && data.length > 0) {
-          setPlaylist(data);
+        
+        // Clear the loading timer if request completes before 10 seconds
+        if (loadingTimer) {
+          clearTimeout(loadingTimer);
+        }
+
+        if (isMounted) {
+          setSongs(data || []);
+          if (data && data.length > 0) {
+            setPlaylist(data);
+          }
         }
       } catch (err) {
         console.error('Error fetching songs:', err);
-        setToast({ message: 'Error loading songs', type: 'error' });
+        if (loadingTimer) {
+          clearTimeout(loadingTimer);
+        }
+        if (isMounted) {
+          setToast({ message: 'Error loading songs', type: 'error' });
+        }
       }
     };
 
     load();
+
+    return () => {
+      isMounted = false;
+      if (loadingTimer) {
+        clearTimeout(loadingTimer);
+      }
+    };
   }, [setPlaylist]);
 
 
@@ -188,6 +219,8 @@ function App() {
     <div className="min-h-screen bg-gray-950 text-white overflow-hidden">
       <AmbientBackground colors={ambientColors} />
 
+      {songs.length > 0 ?
+      (
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
         <div className="max-w-2xl w-full space-y-12">
           <div className="text-center space-y-2">
@@ -285,14 +318,11 @@ function App() {
               </div>
             </div>
           </div>
-
-          {songs.length === 0 && (
-            <div className="text-center text-gray-400 text-sm">
-              No songs found. Please add songs to the database.
-            </div>
-          )}
         </div>
       </div>
+      ):(
+        <Loading/>
+      )}
 
       {toast && (
         <Toast
