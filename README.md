@@ -4,21 +4,21 @@ A real-time voice-powered web music player built with React, Node.js, MongoDB, a
 
 Musy lets users control music using natural speech commands like:
 
-“play/pause”
+-> “play/pause”
 
-“volume up/down”
+-> “volume up/down”
 
-"next song / previous song"
+-> "next song / previous song"
 
-"forward 10 sec / backward 10 sec"
+-> "forward 10 sec / backward 10 sec"
 
-"seek to 40 sec / go to 40 sec"
+-> "seek to 40 sec / go to 40 sec"
 
-Say a song name from the provided list:
+-> Say a song name from the provided list:
 
-“Beliver” → Beliver song plays
+-> “Beliver” → Beliver song plays
 
-“Naatu naatu” → Naatu Naatu plays
+-> “Naatu naatu” → Naatu Naatu plays
 
 
 🚀 Features
@@ -36,7 +36,9 @@ Say a song name from the provided list:
 
 ✔ Single-page React frontend
 
+
 🏗 Architecture Overview
+
 music player/
 │
 
@@ -75,26 +77,26 @@ music player/
 
 Backend Responsibilities:
 
-  Serve audio files (/audio/*.mp3)
+  -> Serve audio files (/audio/*.mp3)
   
-  Expose API endpoints (/,/songs)
+  -> Expose API endpoints (/,/songs)
   
-  Provide metadata for playlist
+  -> Provide metadata for playlist
   
-  MongoDB integration
+  -> MongoDB integration
 
 
 Frontend Responsibilities
 
-  Render player UI
+  -> Render player UI
   
-  Handle voice recognition (Web Speech API)
+  -> Handle voice recognition (Web Speech API)
   
-  Convert text → intent and send to backend
+  -> Convert text → intent and send to backend
   
-  Map recognized text → intent
+  -> Map recognized text → intent
   
-  Animate UI with track colors and audio spikes animation
+  -> Animate UI with track colors and audio spikes animation
 
 
 ⚙️ Setup & Run Instructions
@@ -211,15 +213,15 @@ to seed data to the mongo use the given SeedSongs.json file
 
 ⚠️ Limitations
 
-  Browser Web Speech API accuracy varies by device
+  -> Browser Web Speech API accuracy varies by device
   
-  Local audio files (no cloud streaming)
+  -> Local audio files (no cloud streaming)
   
-  No real audio fingerprinting (humming search not included)
+  -> No real audio fingerprinting (humming search not included)
   
-  Not optimized for large playlists
+  -> Not optimized for large playlists
   
-  Background/noisy environments reduce accuracy
+  -> Background/noisy environments reduce accuracy
   
 
 🎥 Deployment link
