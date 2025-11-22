@@ -1,0 +1,175 @@
+[
+  {
+    "id": "1",
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "keywords": [
+      "shape",
+      "you",
+      "ed",
+      "sheeran",
+      "pop"
+    ],
+    "audio_url": "/audio/song1.mp3",
+    "colors": [
+      "#FFC0CB",
+      "#FF69B4",
+      "#FFB6C1"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Believer",
+    "artist": "Imagine Dragons",
+    "keywords": [
+      "believer",
+      "imagine",
+      "dragons",
+      "rock",
+      "energy"
+    ],
+    "audio_url": "/audio/song2.mp3",
+    "colors": [
+      "#00BFFF",
+      "#1E90FF",
+      "#4682B4"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Perfect",
+    "artist": "Ed Sheeran",
+    "keywords": [
+      "perfect",
+      "romantic",
+      "wedding",
+      "love"
+    ],
+    "audio_url": "/audio/song3.mp3",
+    "colors": [
+      "#FFC0CB",
+      "#FFB6C1",
+      "#FFE4E1"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "keywords": [
+      "blinding",
+      "lights",
+      "weeknd",
+      "synthwave"
+    ],
+    "audio_url": "/audio/song4.mp3",
+    "colors": [
+      "#FFFF00",
+      "#FFD700",
+      "#FFA500"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Closer",
+    "artist": "The Chainsmokers",
+    "keywords": [
+      "closer",
+      "chainsmokers",
+      "pop"
+    ],
+    "audio_url": "/audio/song5.mp3",
+    "colors": [
+      "#ADD8E6",
+      "#87CEFA",
+      "#87CEEB"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "keywords": [
+      "levitating",
+      "dua",
+      "lipa",
+      "dance"
+    ],
+    "audio_url": "/audio/song6.mp3",
+    "colors": [
+      "#EE82EE",
+      "#DA70D6",
+      "#D8BFD8"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "See You Again",
+    "artist": "Wiz Khalifa ft. Charlie Puth",
+    "keywords": [
+      "see",
+      "you",
+      "again",
+      "wiz",
+      "khalifa"
+    ],
+    "audio_url": "/audio/song7.mp3",
+    "colors": [
+      "#FFDAB9",
+      "#FFEFD5",
+      "#FAF0E6"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Faded",
+    "artist": "Alan Walker",
+    "keywords": [
+      "faded",
+      "alan",
+      "walker"
+    ],
+    "audio_url": "/audio/song8.mp3",
+    "colors": [
+      "#AFEEEE",
+      "#40E0D0",
+      "#48D1CC"
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Naatu Naatu",
+    "artist": "RRR",
+    "keywords": [
+      "naatu",
+      "naatu",
+      "rrr",
+      "telugu",
+      "dance"
+    ],
+    "audio_url": "/audio/song9.mp3",
+    "colors": [
+      "#FF4500",
+      "#FF6347",
+      "#FF7F50"
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Tum Hi Ho",
+    "artist": "Arijit Singh",
+    "keywords": [
+      "tum",
+      "hi",
+      "ho",
+      "arijit",
+      "romantic"
+    ],
+    "audio_url": "/audio/song10.mp3",
+    "colors": [
+      "#800000",
+      "#A52A2A",
+      "#B22222"
+    ]
+  }
+]
