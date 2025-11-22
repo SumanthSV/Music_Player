@@ -158,7 +158,7 @@ function App() {
         // Set a 10-second timeout to show loading toast
         loadingTimer = setTimeout(() => {
           if (isMounted) {
-            setToast({ message: 'No songs available on the database', type: 'error' });
+            setToast({ message: 'Fetching the songs', type: 'error' });
           }
         }, 10000);
 
