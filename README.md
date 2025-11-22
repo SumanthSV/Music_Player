@@ -39,23 +39,39 @@ Say a song name from the provided list:
 🏗 Architecture Overview
 music player/
 │
-├── frontend/         # React UI (single-page app)
+
+├── frontend/   
+
 │   ├── src/
+
 │   │   ├── components/
+
 │   │   ├── hooks/
+
 │   │   ├── pages/
+
 │   │   └── utils/
+
 │   └── package.json
+
 │
-├── backend/          # Node.js + Express API
-│   ├── audio/        # Local MP3 files served statically
+
+├── backend/   
+
+│   ├── audio/ 
+
 │   ├── src/
-│   │   ├── server.js # REST API + static file serving
-│   │   └── routes/
+
+│   │   ├── index.js       
+
 │   └── package.json
+
 │
+
 ├── README.md
+
 └── .env
+
 
 Backend Responsibilities:
   Serve audio files (/audio/*.mp3)
